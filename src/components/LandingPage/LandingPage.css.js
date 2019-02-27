@@ -14,7 +14,8 @@ export default StyleSheet.create({
   formCard: {
     flex: 0.3,
     width: '100%',
-    height: 200,
+    height: 260,
+    alignSelf: 'center',
   },
   header: {
     backgroundColor: '#1d61e0',

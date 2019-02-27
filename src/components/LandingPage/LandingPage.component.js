@@ -9,7 +9,7 @@
 
 import React, { Component } from 'react';
 import {
-  Platform, StyleSheet, Text, View, SafeAreaView, ScrollView, Header, Image, TouchableOpacity,
+  Platform, StyleSheet, Text, View, SafeAreaView, ScrollView, Header, Image, TouchableOpacity, TouchableHighlight,
 } from 'react-native';
 import ActionButton from 'react-native-action-button';
 import FormCard from '../FormCard/FormCard.component';
@@ -33,6 +33,10 @@ export default class App extends Component {
       this.componentDidMount();
     }
 
+    onFromClick=(name) => {
+      this.props.navigation.navigate('Fill', { name });
+    }
+
     render() {
       const { navigation } = this.props;
       return (
@@ -52,10 +56,15 @@ export default class App extends Component {
               flexGrow: 1,
               justifyContent: 'center',
               alignItems: 'center',
+              alignSelf: 'center',
             }}
-            style={{ width: '100%', backgroundColor: '#cddcf7' }}
+            style={{ width: '200%', backgroundColor: '#cddcf7' }}
           >
-            {this.state.Forms.map(Form => <FormCard name={Form.FormName} time={Form.createdAt} />)
+            {this.state.Forms.map(Form => (
+              <TouchableHighlight onPress={() => this.onFromClick(Form.FormName)} style={styles.formCard}>
+                <FormCard name={Form.FormName} time={Form.createdAt} onPress={() => this.onFromClick(Form.FormName)} />
+              </TouchableHighlight>
+            ))
             }
 
           </ScrollView>
