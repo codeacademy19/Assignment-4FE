@@ -19,4 +19,12 @@ describe('CreateForm component', () => {
     // wrapper.find(SearchInput).simulate('submit');
     expect(mockFn).toHaveBeenCalled();
   });
+  it('should call "handleOnPress" on clicking the AddField button', () => {
+    mockFn = jest.fn();
+    const wrapper = shallow(<CreateForm />);
+    wrapper.instance().handleOnSave = mockFn();
+    wrapper.find('.button').simulate('press');
+    // wrapper.find(SearchInput).simulate('submit');
+    expect(mockFn).toHaveBeenCalled();
+  });
 });

@@ -117,6 +117,7 @@ class FormCard extends Component {
                 onSubmitEditing={event => this.handleSubmitEditing(event.nativeEvent.text)}
               />
               <TouchableOpacity
+                className="button"
                 style={styles.button}
                 onPress={this.handleOnPress}
               >
