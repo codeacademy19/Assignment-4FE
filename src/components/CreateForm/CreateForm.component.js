@@ -133,6 +133,7 @@ class FormCard extends Component {
             </ScrollView>
             <View style={styles.footer}>
               <TouchableOpacity
+                className="save"
                 style={{ alignItems: 'center' }}
                 onPress={this.handleOnSave}
               >

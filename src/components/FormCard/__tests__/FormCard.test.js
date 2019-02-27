@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import FormCard from '../FormCard.component';
 
 
-describe('CardView component', () => {
+describe('FormCard component', () => {
   it('renders as expected', () => {
     const tree = renderer.create(
       <FormCard name="default" time="15/0/1" />,

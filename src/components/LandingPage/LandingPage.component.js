@@ -41,6 +41,7 @@ export default class App extends Component {
             <Text style={styles.headerText}>Awesome Forms</Text>
             <TouchableOpacity onPress={() => this.onImageClick()}>
               <Image
+                className="image"
                 style={styles.menu}
                 source={require('../../../Icon/menu.png')}
               />

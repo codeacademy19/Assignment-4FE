@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CardView component renders as expected 1`] = `
+exports[`LandingPage component renders as expected 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   style={
@@ -17,6 +17,7 @@ exports[`CardView component renders as expected 1`] = `
     style={
       Object {
         "backgroundColor": "#1d61e0",
+        "flexDirection": "row",
         "height": "10%",
         "justifyContent": "center",
         "width": "100%",
@@ -26,14 +27,48 @@ exports[`CardView component renders as expected 1`] = `
     <Text
       style={
         Object {
+          "alignItems": "flex-start",
+          "alignSelf": "center",
           "color": "white",
           "fontSize": 22,
-          "paddingLeft": 25,
+          "paddingLeft": 5,
         }
       }
     >
       Awesome Forms
     </Text>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Image
+        className="image"
+        source={
+          Object {
+            "testUri": "../../../Icon/menu.png",
+          }
+        }
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "alignSelf": "center",
+            "marginLeft": 100,
+            "marginTop": 10,
+          }
+        }
+      />
+    </View>
   </View>
   <RCTScrollView
     contentContainerStyle={

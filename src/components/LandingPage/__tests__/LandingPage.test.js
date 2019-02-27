@@ -5,7 +5,7 @@ import { shallow, mount } from 'enzyme';
 
 import LandingPage from '../LandingPage.component';
 
-describe('CardView component', () => {
+describe('LandingPage component', () => {
   it('renders as expected', () => {
     const tree = renderer.create(
       <LandingPage />,
@@ -16,6 +16,14 @@ describe('CardView component', () => {
     mockFn = jest.fn();
     const wrapper = shallow(<LandingPage />);
     wrapper.instance().componentDidMount = mockFn();
+    expect(mockFn).toHaveBeenCalled();
+  });
+  it('should call "onImageClick" on clicking the menu', () => {
+    mockFn = jest.fn();
+    const wrapper = shallow(<LandingPage />);
+    wrapper.instance().onImageClick = mockFn();
+    wrapper.find('.image').simulate('press');
+    // wrapper.find(SearchInput).simulate('submit');
     expect(mockFn).toHaveBeenCalled();
   });
 });
