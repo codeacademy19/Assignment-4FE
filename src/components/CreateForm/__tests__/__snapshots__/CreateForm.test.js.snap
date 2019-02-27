@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardView component renders as expected 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "flex": 1,
+      "height": "100%",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#1d61e0",
+        "height": "10%",
+        "justifyContent": "center",
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 22,
+          "paddingLeft": 25,
+        }
+      }
+    >
+      Create Form
+    </Text>
+  </View>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "alignItems": "center",
+        "flexGrow": 1,
+        "justifyContent": "flex-start",
+      }
+    }
+    style={
+      Object {
+        "backgroundColor": "white",
+        "width": "100%",
+      }
+    }
+  >
+    <View>
+      <TextInput
+        allowFontScaling={true}
+        autoCorrect={false}
+        onChangeText={[Function]}
+        onSubmitEditing={[Function]}
+        placeholder="Form Name"
+        placeholderTextColor="black"
+        style={
+          Object {
+            "alignSelf": "flex-start",
+            "borderBottomColor": "grey",
+            "borderBottomWidth": 2,
+            "fontSize": 18,
+            "height": 50,
+            "marginHorizontal": 20,
+            "marginTop": 40,
+            "paddingHorizontal": 10,
+            "width": "85%",
+          }
+        }
+        underlineColorAndroid="transparent"
+        value=""
+      />
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-end",
+            "backgroundColor": "#1d61e0",
+            "height": "7%",
+            "margin": 30,
+            "opacity": 1,
+            "width": "35%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 21,
+              "paddingTop": 7,
+            }
+          }
+        >
+           
+          ADD FIELD
+           
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>
+</RCTSafeAreaView>
+`;

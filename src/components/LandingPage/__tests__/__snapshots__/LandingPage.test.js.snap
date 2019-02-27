@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardView component renders as expected 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#F5FCFF",
+      "flex": 1,
+      "height": "100%",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#1d61e0",
+        "height": "10%",
+        "justifyContent": "center",
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 22,
+          "paddingLeft": 25,
+        }
+      }
+    >
+      Awesome Forms
+    </Text>
+  </View>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "alignItems": "center",
+        "flexGrow": 1,
+        "justifyContent": "center",
+      }
+    }
+    style={
+      Object {
+        "backgroundColor": "#cddcf7",
+        "width": "100%",
+      }
+    }
+  >
+    <View />
+  </RCTScrollView>
+  <View
+    pointerEvents="box-none"
+    style={
+      Array [
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "elevation": undefined,
+            "justifyContent": "flex-end",
+            "zIndex": undefined,
+          },
+        ],
+        Object {
+          "color": "white",
+          "fontSize": 20,
+        },
+      ]
+    }
+  >
+    <View
+      pointerEvents="none"
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "elevation": undefined,
+          "justifyContent": "flex-end",
+          "left": 0,
+          "opacity": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "zIndex": undefined,
+        }
+      }
+    />
+    <View
+      pointerEvents="box-none"
+      style={
+        Array [
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            Object {
+              "elevation": undefined,
+              "justifyContent": "flex-end",
+              "zIndex": undefined,
+            },
+          ],
+          Object {
+            "alignItems": "flex-end",
+          },
+          Object {
+            "paddingVertical": 30,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "marginHorizontal": 30,
+              "zIndex": undefined,
+            },
+            Object {
+              "elevation": 5,
+              "shadowColor": "#000",
+              "shadowOffset": Object {
+                "height": 5,
+                "width": 0,
+              },
+              "shadowOpacity": 0.35,
+              "shadowRadius": 3,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(29, 97, 224, 1)",
+                "borderRadius": 28,
+                "height": 56,
+                "width": 56,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderRadius": 28,
+                  "height": 56,
+                  "justifyContent": "center",
+                  "transform": Array [
+                    Object {
+                      "scale": 1,
+                    },
+                    Object {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 56,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "color": "rgba(255, 255, 255, 1)",
+                    "fontSize": 24,
+                    "marginTop": -4,
+                  }
+                }
+              >
+                +
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

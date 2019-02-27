@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardView component renders as expected 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "flex": 1,
+      "height": 250,
+      "margin": 10,
+      "marginTop": 20,
+      "padding": 10,
+      "width": "80%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "textAlign": "left",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 21,
+          "height": "70%",
+          "marginLeft": 10,
+          "marginTop": 10,
+        }
+      }
+    >
+      default
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "black",
+        "borderStyle": "solid",
+        "borderWidth": 0.5,
+        "marginTop": 10,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "textAlign": "right",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "display": "flex",
+          "flexDirection": "row",
+          "fontSize": 16,
+          "marginTop": 10,
+          "paddingBottom": 10,
+        }
+      }
+    >
+      Created On:
+       
+      15/0/1
+    </Text>
+  </View>
+</View>
+`;
