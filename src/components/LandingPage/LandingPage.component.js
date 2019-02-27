@@ -9,7 +9,7 @@
 
 import React, { Component } from 'react';
 import {
-  Platform, StyleSheet, Text, View, SafeAreaView, ScrollView, Header,
+  Platform, StyleSheet, Text, View, SafeAreaView, ScrollView, Header, Image, TouchableOpacity,
 } from 'react-native';
 import ActionButton from 'react-native-action-button';
 import FormCard from '../FormCard/FormCard.component';
@@ -29,12 +29,22 @@ export default class App extends Component {
       });
     }
 
+    onImageClick=() => {
+      this.componentDidMount();
+    }
+
     render() {
       const { navigation } = this.props;
       return (
         <SafeAreaView style={styles.container}>
           <View style={styles.header}>
             <Text style={styles.headerText}>Awesome Forms</Text>
+            <TouchableOpacity onPress={() => this.onImageClick()}>
+              <Image
+                style={styles.menu}
+                source={require('../../../Icon/menu.png')}
+              />
+            </TouchableOpacity>
           </View>
           <ScrollView
             contentContainerStyle={{

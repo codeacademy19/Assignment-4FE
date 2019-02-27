@@ -109,7 +109,56 @@ exports[`CardView component renders as expected 1`] = `
            
         </Text>
       </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+            "flex": 1,
+            "justifyContent": "flex-start",
+            "width": "85%",
+          }
+        }
+      />
     </View>
   </RCTScrollView>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#1d61e0",
+        "height": "10%",
+        "justifyContent": "center",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 22,
+            "paddingLeft": 25,
+          }
+        }
+      >
+        SAVE
+      </Text>
+    </View>
+  </View>
 </RCTSafeAreaView>
 `;

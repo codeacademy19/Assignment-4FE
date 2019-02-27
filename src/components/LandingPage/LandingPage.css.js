@@ -18,15 +18,19 @@ export default StyleSheet.create({
   },
   header: {
     backgroundColor: '#1d61e0',
-    justifyContent: 'center',
     width: '100%',
     height: '10%',
+    flexDirection: 'row',
+    justifyContent: 'center',
 
   },
   headerText: {
     fontSize: FONT_HEADER,
     color: 'white',
-    paddingLeft: 25,
+    paddingLeft: 5,
+    alignSelf: 'center',
+    alignItems: 'flex-start',
+
   },
   container: {
     flex: 1,
@@ -35,5 +39,10 @@ export default StyleSheet.create({
     height: '100%',
     width: '100%',
   },
-
+  menu: {
+    alignSelf: 'center',
+    alignItems: 'flex-end',
+    marginLeft: 100,
+    marginTop: 10,
+  },
 });

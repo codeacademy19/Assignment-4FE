@@ -49,4 +49,19 @@ export default StyleSheet.create({
     alignSelf: 'flex-start',
     borderWidth: 2,
   },
+  fields: {
+    flex: 1,
+    width: '85%',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+  },
+  footer: {
+
+    backgroundColor: '#1d61e0',
+    justifyContent: 'center',
+    width: '100%',
+    height: '10%',
+
+
+  },
 });

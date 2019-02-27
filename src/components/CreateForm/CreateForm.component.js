@@ -3,15 +3,18 @@ import {
   SafeAreaView, ImageBackground, Text, View, Image, TouchableOpacity, TextInput, ScrollView, Button,
 } from 'react-native';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 import styles from './CreateForm.css';
-
+import postForm from '../../helpers/postFormAttr';
 
 class FormCard extends Component {
     state={
-      Attributes: '',
+      Attributes: [],
       name: '',
+      formName: '',
       text: '',
       rows: [],
+      index: -1,
     }
 
 
@@ -19,35 +22,60 @@ class FormCard extends Component {
       this.setState({ text });
     };
 
-      handleSubmitEditing = () => {
-        if (!this.state.text) return;
+    handleChangeTextField = (name) => {
+      this.setState({ name });
+    };
 
-        this.props.onSubmit(this.state.text);
-        this.setState({ text: '' });
+      handleSubmitEditing = (name) => {
+        this.setState({ formName: name });
       };
 
+      handleSubmitEditingField = async (name) => {
+        const newAttr = `${this.state.Attributes},${name}`;
+        await this.setState({ Attributes: newAttr });
+        console.log(this.state.Attributes);
+      };
+
+      handleOnSave=async () => {
+        // postForm(this.state.formName, this.state.Attributes).then(() => {
+        //   this.props.navigation.navigate('Home');
+        // });
+        await axios.post(`http://localhost:7000/${this.state.formName}`, {
+          attributes: this.state.Attributes,
+        }).then((result) => {
+          console.log(result.data);
+          this.props.navigation.navigate('Home');
+        }).catch((e) => {
+          console.log(e);
+        });
+      }
+
       handleOnPress=() => {
-        this.setState((state) => {
-          state.rows.append(<TextInput
-            value={this.state.text}
-            autoCorrect={false}
-            placeholder="Field Name"
-            placeholderTextColor="black"
-            underlineColorAndroid="transparent"
-            style={{
-              width: '85%',
-              height: 50,
-              marginTop: 40,
-              marginHorizontal: 20,
-              paddingHorizontal: 10,
-              alignSelf: 'flex-start',
-              borderBottomWidth: 2,
-              borderBottomColor: 'grey',
-              fontSize: 18,
-            }}
-            onChangeText={this.handleChangeText}
-            onSubmitEditing={this.handleSubmitEditing}
-          />);
+        const newRows = this.state.rows.concat(<TextInput
+          // value={this.state.Attributes[index]}
+          autoCorrect={false}
+          placeholder="Field Name"
+          placeholderTextColor="black"
+          underlineColorAndroid="transparent"
+          style={{
+            width: '85%',
+            height: 50,
+            marginTop: 40,
+            marginHorizontal: 20,
+            paddingHorizontal: 10,
+            alignSelf: 'flex-start',
+            borderBottomWidth: 2,
+            borderBottomColor: 'grey',
+            fontSize: 18,
+          }}
+          onChangeText={this.handleChangeTextField}
+          onSubmitEditing={event => this.handleSubmitEditingField(event.nativeEvent.text)}
+        />);
+        // const newAttr = this.state.Attributes.concat('');
+        this.setState({
+          rows: newRows,
+          // Attributes: newAttr,
+          index: this.state.index + 1,
         });
         console.log(this.state);
       }
@@ -86,21 +114,33 @@ class FormCard extends Component {
                   fontSize: 18,
                 }}
                 onChangeText={this.handleChangeText}
-                onSubmitEditing={this.handleSubmitEditing}
+                onSubmitEditing={event => this.handleSubmitEditing(event.nativeEvent.text)}
               />
               <TouchableOpacity
                 style={styles.button}
-                onPress={() => this.handleOnPress}
+                onPress={this.handleOnPress}
               >
                 <Text style={styles.buttonText}>
                   {' '}
                   {'ADD FIELD'}
                   {' '}
                 </Text>
-                {this.state.rows}
-              </TouchableOpacity>
-            </ScrollView>
 
+              </TouchableOpacity>
+              <View style={styles.fields}>
+                {this.state.rows}
+              </View>
+            </ScrollView>
+            <View style={styles.footer}>
+              <TouchableOpacity
+                style={{ alignItems: 'center' }}
+                onPress={this.handleOnSave}
+              >
+                <Text style={styles.headerText}>SAVE</Text>
+
+              </TouchableOpacity>
+
+            </View>
 
           </SafeAreaView>
 
